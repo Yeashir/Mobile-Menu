@@ -48,6 +48,7 @@ The top Bar that shows/hides the menu
     height:42px;
     display: none;
 }
+.mobile-bottom{display: none;}
 #ymmmenu_bar .menu_title {
     color:#f2f2f2;
     font-weight: 400;
@@ -95,7 +96,7 @@ The top Bar that shows/hides the menu
     -ms-transition: all .01s ease-in-out;
     transition: all .01s ease-in-out;
     display: block;
-    position: relative;
+    position: absolute;
     width:30px;
     height: 4px;
     background: #f2f2f2;
@@ -296,7 +297,7 @@ div#ymmmenu_bar {
     padding: 12px !important;
     background-color: #DB1F1F !important;
 }
-#ymmmenu_bar .ymmmenu_icon span{    right: 0px !important; margin: 5px auto !important;    top: -15px;}
+#ymmmenu_bar .ymmmenu_icon span{right: 10px !important; margin: 5px auto !important; }
 
 .menu_title a{color: #fff !important;text-decoration: none;}
 
@@ -338,7 +339,7 @@ div#ymmmenu_bar {
 }
 
 .mobile-bottom {position: fixed; bottom: 0; width: 100%;   z-index:7777; text-align: center; height: 45px; }
-a.btm-cl, a.btm-eml{font-size: 24px; padding: 5px; color: #fff; font-weight: 600; display: block; transition: 0.2s; -webkit-transition: 0.2s; width: 50%; float: left; }
+a.btm-cl, a.btm-eml{font-size: 24px; padding: 5px; color: #fff; font-weight: 600; display: block; transition: 0.2s; -webkit-transition: 0.2s; width:50%; float: left; }
 a.btm-cl{border-right: 2px solid;}
 
 a.btm-cl:hover, a.btm-eml:hover{background: #fca200;}
@@ -354,16 +355,19 @@ a.homeancore{
 .ymmmenu_icon{z-index: 9999;}
 
 .menu_logof {
-   height: 100%;
-    position: relative;
+    position: fixed;
     z-index: 9999;
-    background: #fff;
-    text-align: center !important;
+    text-align: left!important;
+    padding: 4px !IMPORTANT;
 }
-.menu_logof img {
-    height:100%;
+.menu_logof img { 
     position: relative;
-    left:10px;
+    left: 10px;
+    width: auto !important;
+    max-height: 34px;
+}
+.menu_logof a {
+    display: block;
 }
 
 #ymmmenu_menu p, #ymmmenu_menu li {

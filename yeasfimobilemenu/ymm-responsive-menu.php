@@ -51,23 +51,25 @@ function ymmmenu_menu() {
         ?>
         <div id="ymmmenu_bar" class="ymmmenu_bar">
             <div class="ymmmenu_icon" style="width:50%">
-                <p class="title_menu"><?php // echo $options['title_menu']    ?></p>
+                <p class="title_menu"><?php // echo $options['title_menu']     ?></p>
                 <span class="ymmmenu_ic_1"></span>
                 <span class="ymmmenu_ic_2"></span>
                 <span class="ymmmenu_ic_3"></span>
             </div>
             <div class="menu_logof" style="width:50%">
                 <a href="<?php echo get_home_url(); ?>">
-                <?php echo ' <img class="bar_logo" src="' . $options['bar_logo'] . '"/>' ?>
+                    <?php echo ' <img class="bar_logo" src="' . $options['bar_logo'] . '"/>' ?>
                 </a>
             </div>
-          
+
         </div>
 
 
-        <div class="mobile-bottom d-md-block d-lg-none">
-            <div class="col-xs-6 p-0" id="call"><a  class="btm-cl align-self-center"  href="tel:<?php echo $options['phone']; ?>">Call</a></div>
-            <div class="col-xs-6 p-0" id="eml"> <a class="btm-eml align-self-center" href="mailto:<?php echo $options['email'] ?>"> Email </a> </div>
+        <div class="mobile-bottom">
+            
+                <div class="" id="call"><a  class="btm-cl align-self-center"  href="tel:<?php echo $options['phone']; ?>">Call</a></div>
+                <div class="" id="eml"> <a class="btm-eml align-self-center" href="mailto:<?php echo $options['email'] ?>"> Email </a> </div>
+         
         </div>
 
         <div id="ymmmenu_menu" class="ymmmenu_levels <?php echo $options['position'] ?> ymmmenu_custom_icons">
@@ -89,11 +91,11 @@ function ymmmenu_menu() {
                 endif;
                 ?>
             </ul>
-                <?php if ($options['search_box'] == 'below_menu') { ?> 
+            <?php if ($options['search_box'] == 'below_menu') { ?> 
                 <div class="ymm_search">
-                <?php echo ymm_search_form(); ?>
+                    <?php echo ymm_search_form(); ?>
                 </div>
-        <?php } ?>
+            <?php } ?>
         </div>
         <?php
     endif;
@@ -169,7 +171,7 @@ function ymmmenu_header_styles() {
                 #ymmmenu_menu.ymmmenu_levels ul li ul {
                     border-top:none!important;
                 }
-        <?php } ?>
+            <?php } ?>
 
             #ymmmenu_menu.left {
                 width:<?php echo $options["how_wide"] ?>%;
@@ -183,13 +185,13 @@ function ymmmenu_header_styles() {
             }
 
 
-        <?php if ($options["nesting_icon"] != '') : ?>
+            <?php if ($options["nesting_icon"] != '') : ?>
                 #ymmmenu_menu .ymmmenu_icon:before {
                     font-family: 'fontawesome'!important;
                 }
             <?php endif; ?>
 
-        <?php if ($options["menu_symbol_pos"] == 'right') : ?>
+            <?php if ($options["menu_symbol_pos"] == 'right') : ?>
                 #ymmmenu_bar .ymmmenu_icon {
                     float: <?php echo $options["menu_symbol_pos"] ?>!important;
                     margin-right:0px!important;
@@ -197,11 +199,11 @@ function ymmmenu_header_styles() {
                 #ymmmenu_bar .bar_logo {
                     pading-left: 0px;
                 }
-        <?php endif; ?>
+            <?php endif; ?>
             /* show the bar and hide othere navigation elements */
             @media only screen and (max-width: <?php echo $options["from_width"] ?>px) {
                 html { padding-top: 42px!important; }
-                #ymmmenu_bar { display: block!important; }
+                #ymmmenu_bar,.mobile-bottom { display: block!important; }
                 div#wpadminbar { position: fixed; }
                 <?php
                 if ($options['hide'] != '') {
