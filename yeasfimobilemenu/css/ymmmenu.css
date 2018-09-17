@@ -271,12 +271,14 @@ body.admin-bar #ymmmenu_menu.right {
 /********/
 
 .icon_default.ymmmenu_icon_par:before {
-    content:"t";
+    content:"\f107";
+    font: normal normal normal 14px/1 FontAwesome;
 }
 
 
 .icon_default.ymmmenu_par_opened:before {
-    content:"o";
+    content:"\f106";
+    font: normal normal normal 14px/1 FontAwesome;
 }
 
 .menu_title{text-align: center !important;}
